@@ -23,12 +23,11 @@ ENGINE = MergeTree()
 ORDER BY (date, start_time);
 
 CREATE TABLE activity_minute (
-    date DateTime,
-    time DateTime,
+    datetime DateTime,
     steps UInt32
 )
 ENGINE = MergeTree()
-ORDER BY (date, time);
+ORDER BY (datetime);
 
 CREATE TABLE activity (
     date DateTime,
