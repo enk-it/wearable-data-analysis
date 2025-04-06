@@ -23,3 +23,24 @@ class ActivityStage(BaseModel):
                 f"Неверный формат времени. Ожидался формат HH:MM, получено: {value}")
 
 
+    def to_list(self):
+        # Объединяем date и start в start_datetime
+        start_datetime = datetime(
+            self.date.year,
+            self.date.month,
+            self.date.day,
+            self.start.hour,
+            self.start.minute,
+            self.start.second
+        )
+        # Объединяем date и stop в stop_datetime
+        stop_datetime = datetime(
+            self.date.year,
+            self.date.month,
+            self.date.day,
+            self.stop.hour,
+            self.stop.minute,
+            self.stop.second
+        )
+        # Возвращаем список с объединёнными start_datetime и stop_datetime
+        return [self.date, start_datetime, stop_datetime, self.distance, self.calories, self.steps]

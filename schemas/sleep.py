@@ -13,3 +13,6 @@ class Sleep(BaseModel):
     stop: datetime
     REMTime: int
     naps: str
+
+    def to_list(self):
+        return [self.date, self.deepSleepTime, self.shallowSleepTime, self.wakeTime, self.start, self.stop, self.REMTime, self.naps]

@@ -19,3 +19,7 @@ class Activity(BaseModel):
             return datetime.strptime(value, '%Y-%m-%d')
         except ValueError:
             raise ValueError(f"Неверный формат даты. Ожидался формат YYYY-MM-DD, получено: {value}")
+
+
+    def to_list(self):
+        return [self.date, self.steps, self.distance, self.runDistance, self.calories]

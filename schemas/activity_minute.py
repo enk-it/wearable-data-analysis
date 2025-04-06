@@ -18,3 +18,13 @@ class ActivityMinute(BaseModel):
         except ValueError:
             raise ValueError(f"Неверный формат времени. Ожидался формат HH:MM, получено: {value}")
 
+
+    def to_list(self):
+        combined_datetime = datetime(
+            self.date.year,
+            self.date.month,
+            self.date.day,
+            self.time.hour,
+            self.time.minute
+        )
+        return [combined_datetime, self.steps]
