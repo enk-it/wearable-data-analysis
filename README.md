@@ -1,3 +1,7 @@
+# About
+If you have any wearable device from xiaomi/amazfit you can export your sleep, heartbeat and activity hystorical data from your account.
+This repo helps you insert this data to clickhouse in order to visualize that information in grafana.
+
 # Installation
 
 ```shell
@@ -6,9 +10,7 @@ yay -S clickhouse clickhuse-client
 yay -S grafana
 
 sudo systemctl enable --now clickhouse-server
-
 sudo systemctl enable --now grafana
-
 
 ```
 
