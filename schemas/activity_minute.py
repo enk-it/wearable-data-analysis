@@ -4,7 +4,7 @@ from pydantic import BaseModel, field_validator
 
 class ActivityMinute(BaseModel):
     date: datetime
-    time: time
+    time: time # %H:%M
     steps: int
 
     @field_validator('time', mode='before')

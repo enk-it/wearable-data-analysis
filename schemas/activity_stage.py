@@ -4,8 +4,8 @@ from pydantic import BaseModel, field_validator
 
 class ActivityStage(BaseModel):
     date: datetime
-    start: time
-    stop: time
+    start: time # %H:%M
+    stop: time # %H:%M
     distance: int
     calories: int
     steps: int
