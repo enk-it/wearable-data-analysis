@@ -25,3 +25,9 @@ http://archpc:3000
 
 default login/password is admin/admin
 
+
+# Screemshots
+
+![Heart rate dashboard screenshot](./screenshots/heart.png)
+![Sleep dashboard screenshot](./screenshots/sleep.png)
+
