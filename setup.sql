@@ -38,3 +38,10 @@ CREATE TABLE activity (
 )
 ENGINE = MergeTree()
 ORDER BY (date);
+
+CREATE TABLE heart_rate (
+    datetime DateTime,
+    heartRate UInt32
+)
+ENGINE = MergeTree()
+ORDER BY (datetime);

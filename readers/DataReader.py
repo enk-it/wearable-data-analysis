@@ -1,6 +1,7 @@
 from schemas.activity import Activity
 from schemas.activity_minute import ActivityMinute
 from schemas.activity_stage import ActivityStage
+from schemas.heartrate_auto import HeartRate
 from schemas.sleep import Sleep
 from utils import get_csv_file_path
 from abc import ABC
@@ -63,3 +64,7 @@ class ActivityStageReader(DataReader):
 class SleepReader(DataReader):
     file_name = "SLEEP"
     model = Sleep
+
+class HeartRateAutoReader(DataReader):
+    file_name = "HEARTRATE_AUTO"
+    model = HeartRate
